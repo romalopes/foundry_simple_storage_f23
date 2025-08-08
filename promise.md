@@ -33,4 +33,11 @@ $ forge script script/DeploySimpleStorage.s.sol --rpc-url http://localhost:8545 
 $ source .env
 $ cast --to-base 0x11111 dec
 
-$ cast send 0x59c6995e998f97a5a0044966f0945389dc9e86dae88c7a8412f4603b6b78690d "store(uint256)" 123 --rpc-url $RPC_URL --private-key $PRIVATE_KEY
+$ cast send 0xcf7ed3acca5a467e9e704c703e8d87f634fb0fc9 "store(uint256)" 123 --rpc-url $RPC_URL --private-key $PRIVATE_KEY
+
+$ cast call 0xcf7ed3acca5a467e9e704c703e8d87f634fb0fc9 "retrieve()"
+$ cast --to-base 0x000000000000000000000000000000000000000000000000000000000001e240 dec
+
+cast call 0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266 "retrieve()"
+
+git remote add origin https://github.com/romalopes/foundry_simple_storage_f23.git
